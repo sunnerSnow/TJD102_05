@@ -1,0 +1,545 @@
+@import url('reset.css');
+
+body{
+    color:var(--text-color);
+    background-color: var(--bg-color);
+}
+/* ---------- Banner 主視覺區 -----------*/
+.banner{
+    background-image: url(../images/banner-h.png);
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+}
+
+.banner-text{
+    width: 600px;
+    height: 500px;   
+    text-align: center;
+}
+.banner-text h1{
+    font-size: 12rem;
+    margin-bottom: 10px;
+    font-family: var(--font-body);
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.banner-text h2{
+    font-size: 5.2rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    /* 文字漸層色效果 */
+    background: var(--topic-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.banner-text p{
+    font-size: 2.2rem;
+    line-height: 2;
+    text-align: center;
+
+}
+.banner-text a{
+   text-decoration: none;
+   margin-top: 24px;
+   font-size: 2rem;
+
+}
+.btn-booking{
+    position: relative;
+    display: inline-block;
+    padding: 15px 25px;
+    /* background: linear-gradient(135deg, #EF6000 50%, #e8914a 50%);     */
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+    background: #000;
+
+}
+.btn-booking span{
+    position: relative;
+    z-index: 2; /*讓文字永遠在最上層*/
+    display: inline-block;
+    align-items: center;
+}
+.btn-booking i{
+    margin-left: 10px;
+    line-height: 1.2;
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 2;
+  /* transition: background 0.3s ease; */
+
+}
+.btn-booking:hover {
+    /* background: var(--text-color); */
+
+}
+
+
+/* 用偽元素分別建立2個一樣的按鈕 */
+.btn-booking::before,
+.btn-booking::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #EF6000 50%, #e8914a 50%);
+  z-index: 0;
+  transition: transform .3s ease;
+}
+
+/*一個往左滑*/
+.btn-booking::before {
+  left: 0;
+  transform: translateX(-100%);
+}
+/*一個往右滑*/
+.btn-booking::after {
+  right: 0;
+  transform: translateX(100%);
+}
+
+/* 滑鼠移開 → 漸層從兩側滑入 */
+.btn-booking:not(:hover)::before,
+.btn-booking:not(:hover)::after {
+  transform: translateX(0);
+}
+
+
+/* ---------- 核心文案區 -----------*/
+.core{
+    margin: 10px 0;
+    min-width: 1440px;
+    height: 500px;
+    background-color: var(--primary-color);
+    font-family: var(--font-cute);
+}
+
+.core-title{
+    color: var(--secondary-color);
+    font-size: 4.6rem;
+    max-width: var(--page-width);
+    height: 100px;
+    padding: 40px 80px 5px;
+
+}
+.core ul{
+    display: flex;
+    gap: 20px;
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+}
+.core li{
+    width: 300px;
+    height: 280px;
+    border: 1px solid #FCEF91;
+    text-align: center;
+    color: var(--bg-color);
+    margin: 0 auto;
+}
+
+.core li h2{
+    font-size: 3.8rem;
+    line-height: 1.2;
+    padding: 20px;
+    
+}
+.core li p{
+    font-size: 1.6rem;
+    padding: 5px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* ---------- Main 課程區 -----------*/
+
+.class-intro{
+    width: 100%;
+    max-width: var(--page-width);
+    display: flex;
+    margin: 0 auto;
+}
+.class-intro ul{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.class-intro li{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: var(--page-width);
+    height: auto;
+    max-height: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+}
+.class-intro li:hover {
+    max-height: 320px;
+  }
+.class-intro-left{
+    width: 800px;
+    height: 100px;
+    /* border: 1px solid green; */
+    margin-left: 80px;
+}
+
+.class-intro-title{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid purple; */
+}
+
+.class-intro-no{
+    font-size: 1.6rem;
+    font-family: var(--font-cute);
+    margin-left: 30px;
+}
+.class-intro-title h4{
+    display: flex;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    /* border: 1px solid orange; */
+    padding-left: 40px;
+
+}
+.class-intro-title-e{
+    font-size: 2.2rem;
+    color: #d2d2d2;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    padding-left: 80px;
+}
+.class-intro-content{
+    width: 600px;
+    margin-top: 10px;
+    margin-left: 90px;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    transition: all 0.5s ease;
+    /* display: none; */
+    opacity: 0;
+    max-height: 0;
+}
+.class-intro-title:hover .class-intro-content p{
+    display: block;
+  }
+.class-intro-r{
+    width: 200px;
+    height: auto;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.5s ease;
+    margin: 5px 0;
+}
+
+.class-intro-r img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+.class-intro li:hover .class-intro-content,
+.class-intro li:hover .class-intro-r {
+  opacity: 1;
+  max-height: 400px;
+}
+
+
+/* ---------- 品牌理念區 -----------*/
+.brand{
+    width: 100%;
+    max-width: var(--page-width);
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    gap: 50px;
+}
+
+.brand-left{
+    width: 600px;
+    margin-left: 80px;
+    padding: 20px;
+    font-size: 2.2rem;
+    color: black;
+}
+
+.brand-bold{
+    font-weight: bold;
+}
+
+.brand-main{
+    background: var(--topic-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-right{
+    width: 600px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+.brand-bg{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    width: 460px;
+    height: 550px;
+    background-color:var(--primary-color);
+    border-radius: 12px;
+    z-index: 0;
+}
+.brand-img{
+    transform: translateX(-30px);
+    z-index: 1;
+}
+.brand-img img{
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* ---------- 教練介紹 -----------*/
+
+.coach{
+    width: 100%;
+    max-width: var(--page-width);
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/coach-bg.png);
+    background-size: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.coach-left img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 999px;
+}
+
+.coach-right{
+    color: var(--text-color);
+    font-family: var(--font-body);
+    margin-left: 60px;
+}
+
+.coach-right h1{
+    font-size: 4.6rem;
+    margin-bottom: 20px;
+}
+.coach-right h2{
+    font-size: 2.8rem;
+    font-weight: bold;;
+    margin-bottom: 20px;
+}
+
+.coach-right p{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* ---------- Google評價區-----------*/
+.google-comment{
+    max-width: var(--page-width);
+    height: auto;
+    margin: 0 auto;
+    /* margin-bottom: 10px; */
+}
+
+.google-comment-title{
+    /* display: block; */
+    text-align: center;
+}
+.google-comment-title h1{
+    font-size: 3.8rem;
+    font-family: var(--font-cute);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.google-comment-inner{
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 12px 24px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.bubble:nth-child(1),
+.bubble:nth-child(5){
+    grid-column: 1 / 4;
+    width: 280px;
+    height: 50px;
+    background-color:  #f0f0f0;
+    border-radius: 60px;
+    padding: 12px;
+}
+
+.bubble:nth-child(3){
+    justify-self: end;
+}
+
+.bubble:nth-child(4),
+.bubble:nth-child(8){
+    grid-column: 2 / 5;
+    width: 280px;
+    height: 50px;
+    background-color:  #f0f0f0;
+    border-radius: 60px;
+    padding: 12px;
+}
+
+
+.bubble{
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    position: relative;
+}
+.bubble img{
+    width: 60px;
+    height: 60px;
+}
+.bubble p{
+    font-size: 1.6rem;
+
+}
+
+/* 用偽元素做氣泡尾巴 */
+.bubble:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    left: 32px; 
+    bottom: -12px; 
+    width: 0;
+    height: 0;
+    border-width: 0 14px 14px 14px;
+    border-style: solid;
+    border-color: transparent transparent transparent #f0f0f0;
+}
+.bubble:nth-child(5)::after{
+    content: '';
+    position: absolute;
+    left: 32px; 
+    bottom: -12px; 
+    width: 0;
+    height: 0;
+    border-width: 0 14px 14px 14px;
+    border-style: solid;
+    border-color: transparent transparent transparent #f0f0f0;
+}
+.bubble:nth-child(4)::before{
+    content: '';
+    position: absolute;
+    right: 50px;  
+    top: -26px; 
+    width: 0;
+    height: 0;
+    border-width: 14px 0 14px 14px;
+    border-style: solid;
+    border-color: transparent transparent #f0f0f0 transparent;
+}
+.bubble:nth-child(8)::before{
+    content: '';
+    position: absolute;
+    right: 50px;  
+    top: -26px; 
+    width: 0;
+    height: 0;
+    border-width: 14px 0 14px 14px;
+    border-style: solid;
+    border-color: transparent transparent #f0f0f0 transparent;
+}
+
+/* 
+.google-comment-inner{
+    display: flex;
+    justify-self: center;
+    gap: 80px;
+    margin: 10px auto;
+    border: 1px solid rebeccapurple;
+
+}
+
+
+.google-comment-left,
+.google-comment-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    border: 1px solid red;
+}
+
+
+
+.bubble-left,
+.bubble-right{
+    background-color: #f0f0f0;
+    border-radius: 60px;
+    width: 400px;
+    height: 100px;
+    padding: 12px 25px;
+    line-height: 2;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+
+.comment-pic img{
+    width: 60px;
+    height: 60px;
+
+} */
+
+
+
+  

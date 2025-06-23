@@ -1,0 +1,54 @@
+@import url('reset.css');
+
+.wrapper{
+    min-width: var(--page-width);
+    height: 535px;
+    background-color: var(--footer-color);
+    color: white;
+    padding: 48px 24px;
+}
+
+.footer-inner{
+    max-width: var(--page-width);
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.footer-left{
+    max-width: 420px;
+    height: 240px;
+    margin-top: 40px;
+    
+}
+.footer-left p{
+    line-height: 2;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.footer-icon i{
+    width: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.footer-right{
+    margin-top: 40px;
+    font-size: 1.8rem;
+    width: 600px;
+    height: 240px;
+}
+.footer-right p{
+    margin-bottom: 10px;
+}
+.footer-right iframe{
+    width: 100%;
+    height: 220px;
+}
+
+.footer-bottom{
+    text-align: center;
+    margin-top: 115px;
+}

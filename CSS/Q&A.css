@@ -1,0 +1,100 @@
+@import url('reset.css');
+
+/* ---------- Hero-----------*/
+
+.hero{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 600px;
+    margin: 0 auto;
+    background-image: url(../images/Q&A.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: var(--font-cute);   
+    line-height: 1.6;
+}
+
+.hero h1{
+    font-size: 11rem;
+    color: white;
+    padding-top: 217px;
+    padding-left: 250px;
+    font-family: 'Caprasimo';
+}
+
+/* ---------- Q & A-----------*/
+
+.qa-group{
+    max-width: 1440px;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding-top: 40px;
+}
+.qa-title{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 4px;
+    font-size: 3.6rem;
+    padding-left: 200px;
+    background: var(--topic-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.qa-title::before {
+    content: attr(data-icon); 
+    font-family: 'Material Symbols Outlined';
+    font-size: 3.6rem;
+    text-align: center;
+    color: var(--primary-color);
+  }
+.qa-item > details{
+    max-width: 900px;
+    outline: 1px solid var(--primary-color);
+    line-height: 40px;
+    margin: 24px auto;
+    border-radius: 30px;
+    background: var(--bg-color);
+    font-size: 2.4rem;
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    transition: box-shadow 0.3s;
+    
+}
+
+summary{
+    display: flex;
+    align-items: center;
+}
+
+.qa-q{
+    margin-right: 30px;
+}
+.qa-text{
+    flex: 1;
+}
+.answer{
+    margin: 20px;
+}
+
+details[open] summary {
+    color: var(--primary-color);
+  }
+summary::after {
+    content: 'add';
+    color: var(--primary-color);
+    font-family: 'Material Symbols Outlined';
+    font-size: 2.8rem;
+    font-variation-settings: 'FILL' 0;
+    transition: 0.2s;
+    display: inline-block;
+}
+details[open] summary::after{
+    content: "remove";
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 1;
+    color: var(--primary-color);
+}
+
+

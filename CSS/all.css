@@ -1,0 +1,29 @@
+@import url('reset.css');
+
+:root{
+    font-size: 62.5%;
+    line-height: 1.6;
+    --page-width: 1200px;
+    --bg-color: white;
+    --text-color:#222222;
+    --primary-color: #EF6000;
+    --secondary-color: #FCEF91;
+    --footer-color:#1E1E1E;
+    --topic-color: linear-gradient(to left,
+    #D43F8D 0%,
+    #FAA72A 21%,
+    #1CA9C2 42%,
+    #0A1735 62%,
+    #8545A2 81%,
+    #6B48A9 100%);
+    --navlist-color:linear-gradient(135deg,
+    #f6d365 0%,
+    #fda085 25%,
+    #f093fb 50%,
+    #c1c8f9 75%,
+    #a1e3d8 100%);
+    --font-nav: 'Zen Kaku Gothic New', 'Noto Sans TC', sans-serif;
+    --font-body: 'M PLUS Rounded 1c', 'Noto Sans TC', sans-serif;
+    --font-cute: 'Kosugi Maru', 'Noto Sans TC', sans-serif;
+    
+}

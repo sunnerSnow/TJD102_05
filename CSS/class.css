@@ -1,0 +1,152 @@
+@import url('reset.css');
+
+/* ---------- Hero-----------*/
+
+.hero{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 600px;
+    margin: 0 auto;
+    background-image: url(../images/Class-hero.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: var(--font-cute);   
+    line-height: 1.6;
+}
+
+.hero h1{
+    font-size: 12rem;
+    color: white;
+    padding-top: 35px;
+    padding-left: 79px;
+    font-family: 'Caprasimo';
+}
+
+.hero h2{
+    padding-top: 50px;
+    padding-left: 60px;
+    font-size: 3.2rem;
+}
+.hero p{
+    font-size: 1.6rem;
+    padding-left: 60px;
+}
+
+/* ---------- Class Core-----------*/
+
+.class-core{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-body);   
+    line-height: 1.6;
+    
+}
+.class-core h1{
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+
+.class-core span{
+    color: var(--primary-color);
+    font-size: 10rem;
+}
+.class-core h2{
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+.class-bg{
+    height: 100vh;
+    background-image: url(../images/class-fixbg.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+/* ---------- 課程介紹-----------*/
+
+.class-intro{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 600px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+
+.class-intro-content{
+    width: 1131px;
+    height: 380px; 
+    background-color: #F6F6F6;
+    border-radius: 100px;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,25%);
+}
+
+.class-intro-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    line-height: 1.6;
+}
+.class-intro-left{
+    width: 500px;
+}
+
+.class-intro-item h3{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+.class-intro-item img{
+    width: 320px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.class-intro-text p{
+    font-size: 2rem;
+}
+.class-intro-right{
+    margin-top: 8px;
+}
+
+.class-intro-content-O{
+    width: 1131px;
+    height: 380px; 
+    background-color: var(--primary-color);
+    border-radius: 100px;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,25%);
+}
+
+.class-intro-right-O{
+    width: 500px;
+}
+.class-intro-left-O{
+    margin-top: 8px;
+}
+.class-intro-left-O img{
+    width: 320px;
+    height: 320px;
+    margin-bottom: 8px;
+
+}
+
+.class-intro-right-O h3{
+    color: var(--bg-color);
+}
+
+.class-intro-right-O p{
+    color: var(--bg-color);
+}

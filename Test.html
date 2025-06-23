@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<style>
+.review-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.review-card {
+  width: 320px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: white;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.review-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+.review-stars {
+  color: #f5b700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.review-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 12px 0;
+  color: var(--primary-color, #1e88e5);
+}
+
+.review-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.review-author {
+  font-size: 1.2rem;
+  color: #888;
+}
+.review-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+</style>
+<body>
+  <section class="review-section">
+    <div class="review-card">
+      <img src="./images/avatar1.png" alt="avatar" class="review-avatar">
+      <div class="review-stars">★★★★★</div>
+      <h3 class="review-title">E.F. Life 一對一訓練推薦</h3>
+      <p class="review-text">
+        原本膝蓋疼痛不敢運動，在這裡教練根據我的身體狀況做調整，現在不只可以深蹲，還愛上了每週的訓練！
+      </p>
+      <div class="review-author">— 小芸（36歲｜上班族）</div>
+    </div>
+  </section>
+  
+  
+    
+</body>
+</html>

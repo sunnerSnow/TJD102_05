@@ -1,0 +1,111 @@
+@import url('reset.css');
+
+.hero-black{
+    min-width: var(--page-width);
+    background-color: var(--footer-color);
+    /* 元素背景模糊效果，暫時保留給之後+js */
+    /* background-color: rgba(30,30,30,0.6); */
+    /* backdrop-filter: blur(6px);  */
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-width: var(--page-width);
+    margin: 0 auto;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 9999; 
+    background-color: var(--footer-color);
+    transition: background-color 0.3s;
+    
+}
+
+.logo img{
+    width: 42px;
+    padding:12px 24px;
+    
+}
+.main-menu{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end; /*nav要靠右*/
+    margin-right: 30px;
+
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li a{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.6;
+    color: white;
+    padding: 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: var(--font-nav);
+    transition: transform 0.3s ease;
+}
+
+.nav-list li a:hover{
+    transform: translateY(-3px);
+}
+
+.sub-list{
+    position: relative;
+    width: 160px;
+    text-align: center;
+    line-height: 1.6;
+}
+.sub-menu{
+    display: none;
+    list-style: none;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    margin-top: 1px; /* 不要跟header重疊，所以用margin往下堆*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.sub-menu li a{
+    display: block;
+    color: var(--text-color);
+    text-align:center;
+    border-radius: 4px;
+    padding: 10px;
+    /*動畫速度從 慢 → 快 → 慢*/
+    transition: color 0.3s ease ;
+}
+
+
+.login img{
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+.sub-list:hover .sub-menu{
+    display: block;
+}
+
+.sub-menu li a:hover{
+    background:var(--navlist-color);
+    backdrop-filter: blur(12px);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    transform: scale(1.05);
+    border-radius: 6px;
+}
+

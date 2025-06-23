@@ -23,3 +23,84 @@
 }
 
 
+/* ---------- Comment-----------*/
+
+.comment-block{
+    max-width: 1440px;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding-top: 40px;
+    margin-bottom: 24px;
+}
+
+.comment-title{
+    display: inline-block;
+    font-size: 3.6rem;
+    background: var(--topic-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 200px;
+    margin-bottom: 24px;
+}
+.comment-title::before{
+    content: attr(data-icon); 
+    font-family: 'Material Symbols Outlined';
+    font-size: 3.6rem;
+    text-align: center;
+    padding-right: 8px;
+
+}
+
+.comment-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.comment-card{
+    width: 500px;
+    height: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    font-size: 1.6rem;
+    border-radius: 20px;
+    padding: 24px 48px;
+    line-height: 1.6;
+    font-family: var(--font-body);
+    position: relative;
+}
+.comment-card.left .comment-pic{
+    position: absolute;
+    top: 24px;
+    left: -28px;
+
+}
+
+.comment-card.right .comment-pic{
+    position: absolute;
+    top: 24px;
+    right: -31px;
+}
+
+.comment-pic img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--primary-color);
+}
+.comment-card.left{
+    align-self: flex-start;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.comment-card.right{
+    align-self: flex-end;
+    background-color: #F6F6F6;
+    color: var(--text-color);
+}

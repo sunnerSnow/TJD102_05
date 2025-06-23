@@ -47,7 +47,6 @@
     font-family: 'Material Symbols Outlined';
     font-size: 3.6rem;
     text-align: center;
-    color: var(--primary-color);
   }
 .qa-item > details{
     max-width: 900px;
@@ -77,7 +76,6 @@ summary{
 .answer{
     margin: 20px;
 }
-
 details[open] summary {
     color: var(--primary-color);
   }

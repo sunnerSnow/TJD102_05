@@ -9,83 +9,102 @@
     <title>Document</title>
 </head>
 <style>
-.review-section {
+.comment-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: center;
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  font-family: 'Noto Sans TC', sans-serif;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  padding: 40px 20px;
 }
 
-.review-card {
-  width: 320px;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  background: white;
-  padding: 24px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-  text-align: center;
+/* 通用卡片樣式 */
+.comment-card {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 32px 32px;
+  border-radius: 24px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
 }
 
-.review-avatar {
-  width: 80px;
-  height: 80px;
+/* avatar 共用設定 */
+.comment-avatar {
+  position: absolute;
+  top: -32px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  margin-bottom: 12px;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.comment-avatar img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.review-stars {
-  color: #f5b700;
+/* 左側卡片 */
+.comment-card.left {
+  align-self: flex-start;
+  background-color: #fff3e0;
+  color: #4e342e;
+}
+.comment-card.left .comment-avatar {
+  left: -32px;
+}
+
+/* 右側卡片 */
+.comment-card.right {
+  align-self: flex-end;
+  background-color: #e1f5fe;
+  color: #01579b;
+}
+.comment-card.right .comment-avatar {
+  right: -32px;
+}
+
+/* 留言文字樣式 */
+.comment-bubble p {
   font-size: 1.8rem;
-  letter-spacing: 2px;
-}
-
-.review-title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin: 12px 0;
-  color: var(--primary-color, #1e88e5);
-}
-
-.review-text {
-  font-size: 1.4rem;
   line-height: 1.6;
   margin-bottom: 16px;
-  color: #333;
 }
-
-.review-author {
-  font-size: 1.2rem;
-  color: #888;
-}
-.review-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.review-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+.comment-bubble h3 {
+  font-size: 1.4rem;
+  text-align: right;
+  font-weight: normal;
 }
 
 
 </style>
 <body>
-  <section class="review-section">
-    <div class="review-card">
-      <img src="./images/avatar1.png" alt="avatar" class="review-avatar">
-      <div class="review-stars">★★★★★</div>
-      <h3 class="review-title">E.F. Life 一對一訓練推薦</h3>
-      <p class="review-text">
-        原本膝蓋疼痛不敢運動，在這裡教練根據我的身體狀況做調整，現在不只可以深蹲，還愛上了每週的訓練！
-      </p>
-      <div class="review-author">— 小芸（36歲｜上班族）</div>
+  <div class="comment-list">
+    <div class="comment-card left">
+      <div class="comment-avatar">
+        <img src="avatar1.jpg" alt="avatar">
+      </div>
+      <div class="comment-bubble">
+        <p>這是一段來自左邊的留言內容。</p>
+        <h3>小茹｜30歲 初次健身</h3>
+      </div>
     </div>
-  </section>
   
+    <div class="comment-card right">
+      <div class="comment-avatar">
+        <img src="avatar2.jpg" alt="avatar">
+      </div>
+      <div class="comment-bubble">
+        <p>這是來自右邊的留言，感謝教練指導！</p>
+        <h3>小明｜35歲 辦公族</h3>
+      </div>
+    </div>
+  </div>
   
     
 </body>
 </html>
+
+

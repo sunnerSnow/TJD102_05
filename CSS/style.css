@@ -139,7 +139,7 @@ body{
 }
 .core ul{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     width: 1200px;
     height: 400px;
     margin: 0 auto;
@@ -151,19 +151,20 @@ body{
     text-align: center;
     color: var(--bg-color);
     margin: 0 auto;
+    padding: 10px;
 }
 
 .core li h2{
     font-size: 3.8rem;
     line-height: 1.2;
-    padding: 20px;
+    padding: 30px;
     
 }
 .core li p{
     font-size: 1.6rem;
     padding: 5px;
     line-height: 1.5;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 /* ---------- Main 課程區 -----------*/

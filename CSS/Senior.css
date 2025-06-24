@@ -27,41 +27,50 @@ body{
     margin: 0 auto;
     align-items: center;
     min-height: 300px;
+    position: relative;
 }
 
-.class-intro-left{
+.class-title-bg {
+    position: absolute;
+    font-size: 8rem;
+    font-family: 'Caprasimo';
+    color: #F6F6F6;  
+    z-index: 1;
+    right: 0;
+    top: 120px;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+
+.class-intro-right{
     flex: 2;
     position: relative;
 }
-.class-intro-right{
+.class-intro-left{
     flex: 1.4;
+    z-index: 2;
 }
-.class-intro-left h1{
-    padding-left: 20px;
+.class-intro-right h1{
     font-size: 8rem;
     font-weight: bold;
     color: var(--primary-color);
     position: relative;
     z-index: 2;
-}
-
-.class-intro-left h2{
-    font-size: 8rem;
-    padding-left: 20px;
-    color: #F6F6F6;
-    font-family: 'Caprasimo';         
-    margin-top: -9rem;
-    white-space: nowrap;
-    z-index: 1;
-
-}
-.class-intro-right h3{
-    font-size: 2.2rem;
-    font-weight: bold;;
-}
-.class-intro-right p{
-    font-size: 2.2rem;
+    text-align: right;
     padding-right: 60px;
+}
+
+
+.class-intro-left h3{
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-left: 60px;
+
+}
+.class-intro-left p{
+    font-size: 2.2rem;
+    padding-left: 60px;
 }
 
 
@@ -142,6 +151,7 @@ body{
 
 .classText h3{
     font-size: 2.2rem;
+    padding-bottom: 8px;
 }
 .classText p{
     font-size: 1.8rem;

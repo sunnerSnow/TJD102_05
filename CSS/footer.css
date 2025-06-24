@@ -29,7 +29,7 @@
     margin: 10px 0;
 }
 .footer-icon i{
-    width: 24px;
+    font-size: 1.8rem;
     margin-right: 5px;
     cursor: pointer;
 }

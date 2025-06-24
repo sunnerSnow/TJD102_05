@@ -1,0 +1,164 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+body{
+    box-sizing: border-box;
+    max-width: 1440px;
+
+
+}
+/* ---------- Hero-----------*/
+
+.hero{
+    width: 100%;
+    min-height: 600px;
+    margin: 0 auto;
+    background-image: url(../images/Class-熟齡.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+.class-intro{
+    font-family: var(--font-body);
+    line-height: 1.6;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    min-height: 300px;
+}
+
+.class-intro-left{
+    flex: 2;
+    position: relative;
+}
+.class-intro-right{
+    flex: 1.4;
+}
+.class-intro-left h1{
+    padding-left: 20px;
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 2;
+}
+
+.class-intro-left h2{
+    font-size: 8rem;
+    padding-left: 20px;
+    color: #F6F6F6;
+    font-family: 'Caprasimo';         
+    margin-top: -9rem;
+    white-space: nowrap;
+    z-index: 1;
+
+}
+.class-intro-right h3{
+    font-size: 2.2rem;
+    font-weight: bold;;
+}
+.class-intro-right p{
+    font-size: 2.2rem;
+    padding-right: 60px;
+}
+
+
+
+/* ---------- 課程內容 -----------*/
+
+.classInner{
+    max-width: 1440px;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding-top: 40px;
+    margin-bottom: 24px;
+}
+
+
+
+.classList{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.classContent{
+    width: 800px;
+    height: 200px;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    /* font-size: 1.6rem; */
+    border-radius: 20px;
+    padding: 24px 60px;
+    /* line-height: 1.6; */
+    /* font-family: var(--font-body); */
+    position: relative;
+}
+
+.section-number{
+    position: absolute;
+    top: 24px;
+    font-size: 8rem;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+}
+.classContent.left .section-number {
+    left: 12px;
+    color: var(--bg-color);
+}
+.classContent.right .section-number {
+    text-align: right;
+    right: 28px;
+    color: var(--primary-color);
+    
+}
+
+.classContent.left{
+    align-self: flex-start;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.classContent.right{
+    align-self: flex-end;
+    background-color: #F6F6F6;
+    color: var(--text-color);
+}
+
+.classContent.left .classText{
+    padding-left: 92px;
+}
+.classText{
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.classText h3{
+    font-size: 2.2rem;
+}
+.classText p{
+    font-size: 1.8rem;
+    display: inline-flex;   /* 讓第二排繞過icon，對齊上方文字 */
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.classText p::before {
+    content:'lightbulb';
+    font-family: 'Material Symbols Outlined';
+    font-size: 2rem;
+    color: var(--bg-color);
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .classContent.right .classText p::before {
+    content: 'arrow_forward';
+    color: var(--primary-color); 
+  }

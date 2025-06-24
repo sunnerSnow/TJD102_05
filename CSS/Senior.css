@@ -20,6 +20,8 @@ body{
 
 }
 
+/* ---------- 課程介紹-----------*/
+
 .class-intro{
     font-family: var(--font-body);
     line-height: 1.6;
@@ -50,6 +52,7 @@ body{
 .class-intro-left{
     flex: 1.4;
     z-index: 2;
+    padding-left: 60px;
 }
 .class-intro-right h1{
     font-size: 8rem;

@@ -1,0 +1,114 @@
+@import url('reset.css');
+
+body{
+    box-sizing: border-box;
+    max-width: 1440px;
+
+
+}
+/* ---------- Hero-----------*/
+
+.hero{
+    width: 100%;
+    min-height: 600px;
+    margin: 0 auto;
+    background-image: url(../images/Member.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+/* ---------- Member Login-----------*/
+
+.main{
+	min-width:  var(--page-width);
+	height: 540px;
+	margin-top: 50px;
+	color: var(--bg-color);
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1{
+	font-size: 8rem;
+	font-family: var( --font-cute);
+    color: var(--primary-color);
+    line-height: 1.4;
+    padding-top: 20px;
+    letter-spacing: 0.1em;
+    animation: mainTitle 1.2s ease-out;
+	opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+@keyframes mainTitle{
+    0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(60px);
+    filter: blur(4px);
+    }
+    60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+    filter: blur(0);
+    }
+    100% {
+    transform: scale(1) translateY(0);
+    }
+}
+
+.chick-animation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .chick {
+    width: 100px;
+    animation: chick 2s ease-in-out infinite;
+  }
+  
+  /* 每隻小雞微錯開動畫時間，形成節奏感 */
+  .chick-2 { animation-delay: 0.2s; }
+  .chick-3 { animation-delay: 0.4s; }
+  .chick-4 { animation-delay: 0.6s; }
+  .chick-5 { animation-delay: 0.8s; }
+  
+  @keyframes chick {
+    0%, 100% { transform: translateY(0); } /*開始&結束在原位*/
+    50% { transform: translateY(-10px); }  /*往上移動*/
+  }
+  
+.comingSoon{
+    display: inline-block;
+    font-size: 10rem;
+    font-family: var( --font-cute);
+    background: var(--topic-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    font-weight: bold;
+    opacity: 0;
+    animation: subTitle 1.6s cubic-bezier(.77,0,.18,1) .5s forwards;
+}
+
+
+@keyframes subTitle {
+    from {
+        opacity: 0;
+        filter: blur(4px);
+        letter-spacing: 0.08em;
+      }
+      80% {
+        opacity: 1;
+        filter: blur(0.5px);
+        letter-spacing: 0;
+      }
+      to {
+        opacity: 1;
+        filter: blur(0);
+        letter-spacing: 0;
+      }
+  }

@@ -2,7 +2,7 @@
 
 .wrapper{
     min-width: var(--page-width);
-    height: 535px;
+    height: 536px;
     background-color: var(--footer-color);
     color: white;
     padding: 48px 24px;

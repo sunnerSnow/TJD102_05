@@ -19,36 +19,36 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=LXGW+WenKai+TC&family=Lavishly+Yours&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
 </head>
 <body>
 <!-- Header 導覽列 -->
+<div class="nav"><!-- logo -->
+    <a href="./index.html" class="logo">
+        <img src="./images/logo-white.svg" alt="">
+    </a>
+    <nav class="main-menu"><!-- 主選單 -->
+        <ul class="nav-list">
+            <li><a href="./About.html">ABOUT</a></li>
+            <li class="sub-list">
+                <a href="./class.html">CLASS</a>
+                <ul class="sub-menu"><!-- 次選單 -->
+                    <li><a href="">姿勢評估與改善</a></li>
+                    <li><a href="">熟齡友善健身</a></li>
+                    <li><a href="">一對一私人訓練</a></li>
+                    <li><a href="">一對二共同訓練</a></li>
+                </ul>
+            </li>
+            <li><a href="./peopleSay.html">PEOPLE SAYS</a></li>
+            <li><a href="./Q&A.html">Q & A</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <a href="" class="login"><!-- 登入按鈕 -->
+        <img src="./images/person.png" alt="登入">
+    </a>
+</div>
 <header class="hero-black">
-    <div class="nav"><!-- logo -->
-        <a href="./index.html" class="logo">
-            <img src="./images/logo-white.svg" alt="">
-        </a>
-        <nav class="main-menu"><!-- 主選單 -->
-            <ul class="nav-list">
-                <li><a href="./About.html">ABOUT</a></li>
-                <li class="sub-list">
-                    <a href="./class.html">CLASS</a>
-                    <ul class="sub-menu"><!-- 次選單 -->
-                        <li><a href="">姿勢評估與改善</a></li>
-                        <li><a href="">熟齡友善健身</a></li>
-                        <li><a href="">一對一私人訓練</a></li>
-                        <li><a href="">一對二共同訓練</a></li>
-                    </ul>
-                </li>
-                <li><a href="./peopleSay.html">PEOPLE SAYS</a></li>
-                <li><a href="./Q&A.html">Q & A</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-        <a href="" class="login"><!-- 登入按鈕 -->
-            <img src="./images/person.png" alt="登入">
-        </a>
-    </div>
+    
 </header>   
 <!-- Hero -->  
 <section class="hero">
@@ -58,8 +58,16 @@
 <!-- Contact -->
  <main>
     <!-- <div class="tab-switch"> -->
-    <input type="radio" class="tab-radio" name="tab" id="tab1" checked><label for="tab1">加入好友</label><input type="radio" class="tab-radio" name="tab" id="tab2"><label for="tab2">聯絡我們</label>
+        
     <!-- </div> -->
+    <input type="radio" class="tab-radio" name="tab" id="tab1" checked>
+    <input type="radio" class="tab-radio" name="tab" id="tab2">
+    <div class="top-tab">
+        <label for="tab1">加入好友</label>
+        <label for="tab2">聯絡我們</label>
+    </div>
+    
+
     <div class="tab-content">
         <div class="tab-page" id="page1">
             <a href="https://line.me/R/ti/p/@hcy2394b" class="line-button" target="_blank">

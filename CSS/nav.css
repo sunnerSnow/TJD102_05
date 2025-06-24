@@ -16,7 +16,6 @@
     margin: 0 auto;
     padding: 5px;
     position: sticky;
-
     background-color: var(--footer-color);
     transition: background-color 0.3s;
     

@@ -24,32 +24,34 @@
 
 <body>
 <!-- Header 導覽列 -->
-    <header class="hero-black">
-        <div class="nav"><!-- logo -->
-            <a href="./index.html" class="logo">
-                <img src="./images/logo-white.svg" alt="">
-            </a>
-            <nav class="main-menu"><!-- 主選單 -->
-                <ul class="nav-list">
-                    <li><a href="./About.html">ABOUT</a></li>
-                    <li class="sub-list">
-                        <a href="./class.html">CLASS</a>
-                        <ul class="sub-menu"><!-- 次選單 -->
-                            <li><a href="">姿勢評估與改善</a></li>
-                            <li><a href="">熟齡友善健身</a></li>
-                            <li><a href="">一對一私人訓練</a></li>
-                            <li><a href="">一對二共同訓練</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./peopleSay.html">PEOPLE SAYS</a></li>
-                    <li><a href="./Q&A.html">Q & A</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
+ <!-- 學長：把nav移動header後解決nav無法固定的問題，但其它分頁未解，待個專結束再解bug -->
+<div class="nav"><!-- logo -->
+    <a href="./index.html" class="logo">
+        <img src="./images/logo-white.svg" alt="">
+    </a>
+    <nav class="main-menu"><!-- 主選單 -->
+        <ul class="nav-list">
+            <li><a href="./About.html">ABOUT</a></li>
+            <li class="sub-list">
+                <a href="./class.html">CLASS</a>
+                <ul class="sub-menu"><!-- 次選單 -->
+                    <li><a href="">姿勢評估與改善</a></li>
+                    <li><a href="">熟齡友善健身</a></li>
+                    <li><a href="">一對一私人訓練</a></li>
+                    <li><a href="">一對二共同訓練</a></li>
                 </ul>
-            </nav>
-            <a href="" class="login"><!-- 登入按鈕 -->
-                <img src="./images/person.png" alt="登入">
-            </a>
-        </div>
+            </li>
+            <li><a href="./peopleSay.html">PEOPLE SAYS</a></li>
+            <li><a href="./Q&A.html">Q & A</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <a href="" class="login"><!-- 登入按鈕 -->
+        <img src="./images/person.png" alt="登入">
+    </a>
+</div>
+ <header class="hero-black">
+        
 <!-- HERO主視覺 -->
         <div class="banner">
             <div class="banner-text">
@@ -59,7 +61,7 @@
             <a href="./contact.html" class="btn-booking"><span>立即預約</span><i class="fi fi-rr-angle-right"></i></a>
             </div>
         </div>
-    </header>
+</header>
 <!-- 核心文案區 -->
 <section class="core">
     <div class="core-title">
@@ -75,7 +77,7 @@
         </li>
         <li>
             <h2>強化肌力,<br>減緩老化</h2>
-            <p>隨著年齡增加，肌肉流失速度加快。<br>
+            <p>隨著年齡增加，肌肉流失速度加快。
                 透過定期肌力訓練，<br>不只改善體態與代謝，<br>
                 更能延緩退化、提升行動力與生活品質。</p>
         </li>
@@ -236,45 +238,7 @@
 
 
 
-  <!-- <section class="google-comment">
-    <div class="google-comment-title">
-        <h1>Google 評價</h1>
-    </div>
-    <div class="google-comment-inner">
-        <div class="google-comment-left">
-            <div class="comment-pic"> 
-                <img src="./images/comment-1.svg" alt="">
-            </div>
-            <div class="bubble-left">
-                <p>我困擾多年的下背痛，<br>
-                    沒想到居然因為訓練而好轉了。</p>
-            </div>
-            <div class="bubble-left">
-                <p>一個人運動我總是害怕，但這裡的<br>
-                    教練總是給我安全感與支持。</p>
-            </div>
-            <div class="comment-pic">
-                <img src="./images/comment-2.svg" alt="">
-            </div>
-        </div>
-        <div class="google-comment-right">
-            <div class="bubble-right">
-                <p>年紀不是藉口！超過 50 歲的我，<br>
-                    也重新找回了身體的自主權。</p>
-            </div>
-            <div class="comment-pic">
-                <img src="./images/comment-3.svg" alt=""></div>
-            <div class="bubble-right">
-                <p>我以前超討厭運動，但在這裡卻<br>
-                    一點一點愛上了流汗的感覺。</p>
-            </div>
-            <div class="comment-pic">
-                <img src="./images/comment-4.svg" alt="">
-            </div>
-        </div>
-    </div>
-  </section> -->
-
+  
 <!-- Footer -->
 <footer class="wrapper">
     <div class="footer-inner">

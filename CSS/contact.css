@@ -39,40 +39,55 @@ main{
 }
 
 /* 取消前面的點選樣式 */
-.tab-radio[type="radio"]{
+.tab-radio{
     display: none;
 }
 
-main > label{
-    display: inline-block;
-    width: 50%;
+.top-tab{
+    display: flex;
+    width: 700px;
     background: #F6F6F6;
-    border-radius: 28px;
-    padding: 18px 0;
+    border-radius: 36px;
+    padding: 16px 0;
+    margin: 0 auto;
     text-align: center;
     font-size: 1.6rem;
     font-family: var(--font-cute);
-    font-weight: bold;
+    transition: 0.2s;
+
+    /* font-weight: bold;
     color: #B0B0B0;
     user-select: none;
     transition: 0.2s;
     z-index: 2;
-    cursor: pointer;
+    cursor: pointer; */
 }
-
-label[for="tabe1"], label[for="tab2"]{
+/* .top-tab{
+    width: 700px;
+    display: flex;
+} */
+.top-tab label{
     display: inline-block;
     width: 50%;
-    
+    text-align: center;  
+    line-height: 3;
+    border-radius: 28px;
+
+}
+
+label[for="tab1"], label[for="tab2"]{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
 }
 
 /* 選到的那個會變色 */
-#tab1:checked + label[for="tab1"] {
+#tab1:checked ~ .top-tab label[for="tab1"]{
     background: var(--primary-color);
     color: var(--bg-color);
     z-index: 3;
   }
-#tab2:checked + label[for="tab2"] {
+#tab2:checked ~ .top-tab label[for="tab2"] {
     background: var(--primary-color);
     color: var(--bg-color);
     z-index: 3;

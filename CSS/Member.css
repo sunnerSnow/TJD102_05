@@ -31,7 +31,7 @@ body{
 }
 
 h1{
-	font-size: 8rem;
+	font-size: 4rem;
 	font-family: var( --font-cute);
     color: var(--primary-color);
     line-height: 1.4;
@@ -83,7 +83,7 @@ h1{
   
 .comingSoon{
     display: inline-block;
-    font-size: 10rem;
+    font-size: 5rem;
     font-family: var( --font-cute);
     background: var(--topic-color);
     -webkit-background-clip: text;

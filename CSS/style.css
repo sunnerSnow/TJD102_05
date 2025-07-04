@@ -14,7 +14,7 @@ body{
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    padding-left: 8%;
+    /* padding-left: 8%; */
 }
 
 .banner-text{
@@ -122,9 +122,10 @@ body{
 
 /* ---------- 核心文案區 -----------*/
 .core{
-    margin: 10px 0;
-    min-width: 1440px;
-    height: 500px;
+    /* margin: 0; */
+    /* max-width: 1440px; */
+    width: 100%;
+    height: 450px;
     background-color: var(--primary-color);
     font-family: var(--font-cute);
 }
@@ -139,13 +140,17 @@ body{
 }
 .core ul{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     height: 400px;
     margin: 0 auto;
 }
 .core li{
-    width: 300px;
+    flex:1 1 280px;
+    max-width: 360px;
     height: 280px;
     border: 1px solid #FCEF91;
     text-align: center;
@@ -176,12 +181,13 @@ body{
     margin: 0 auto;
 }
 .class-intro ul{
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .class-intro li{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     align-items: center;
@@ -262,8 +268,9 @@ body{
 }
 
 .class-intro-r img{
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    max-width: 300%;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     
@@ -340,6 +347,7 @@ body{
 
 .coach{
     width: 100%;
+    flex-wrap: wrap;
     max-width: var(--page-width);
     height: 600px;
     margin: 0 auto;
@@ -359,6 +367,7 @@ body{
 }
 
 .coach-right{
+    w100p
     color: var(--text-color);
     font-family: var(--font-body);
     margin-left: 60px;
@@ -414,7 +423,7 @@ body{
 .bubble:nth-child(5){
     grid-column: 1 / 4;
     width: 280px;
-    height: 50px;
+    height: 70px;
     background-color:  #f0f0f0;
     border-radius: 60px;
     padding: 12px;
@@ -428,7 +437,7 @@ body{
 .bubble:nth-child(8){
     grid-column: 2 / 5;
     width: 280px;
-    height: 50px;
+    height: 70px;
     background-color:  #f0f0f0;
     border-radius: 60px;
     padding: 12px;

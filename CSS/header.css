@@ -1,7 +1,8 @@
 @import url('reset.css');
 
 .hero-black{
-    min-width: var(--page-width);
+    width: 100%;
+    /* min-width: var(--page-width); */
     background-color: var(--footer-color);
     /* 元素背景模糊效果，暫時保留給之後+js */
     /* background-color: rgba(30,30,30,0.6); */
@@ -12,7 +13,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    min-width: var(--page-width);
+    /* min-width: var(--page-width); */
     margin: 0 auto;
     padding: 5px;
     position: sticky;
@@ -24,10 +25,17 @@
 }
 
 .logo img{
-    width: 42px;
-    padding:12px 24px;
-    
+    height: 42px;
+    /* padding:12px 24px; */
+    display: block; 
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+}
+  
 .main-menu{
     display: flex;
     flex-grow: 1;

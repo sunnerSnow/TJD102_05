@@ -28,7 +28,7 @@ body{
     display: flex;
     margin: 0 auto;
     align-items: center;
-    min-height: 300px;
+    min-height: 350px;
     position: relative;
 }
 
@@ -42,6 +42,7 @@ body{
     top: 120px;
     white-space: nowrap;
     pointer-events: none;
+    padding-left: 60px;
   }
 
 
@@ -92,7 +93,7 @@ body{
 .classList{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 56px;
     max-width: var(--page-width);
     margin: 0 auto;
     /* border: 1px solid red; */
@@ -100,7 +101,7 @@ body{
 
 .classContent{
     width: 800px;
-    height: 200px;
+    height: 300px;
     align-items: center;
     margin-left: 50px;
     margin-right: 50px;

@@ -35,7 +35,7 @@
 
 /* ---------- Class Core-----------*/
 
-.class-core{
+/* .class-core{
     max-width: 1440px;
     width: 100%;
     min-height: 600px;
@@ -68,7 +68,200 @@
     background-position: center center;
     background-attachment: fixed;
     
+} */
+
+/* ---------- 課程核心 挑戰自己畫六角形----------*/
+.class-core{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-body);   
+    line-height: 1.6;
+    
 }
+.class-core h1{
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+
+.class-core span{
+    color: var(--primary-color);
+    font-size: 10rem;
+}
+.class-core h2{
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+.hex-container{
+    max-width: 1200px;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+/* 左邊六角形 */
+.hex-left-o{
+    position: absolute;
+    top: 15.5%;
+    left: 5.5%;
+    width: 450px;
+    height: 400px;
+    background-color: #0a1735;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hex-left-w{
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    width: 400px;
+    height: 350px;
+    background-color: #F6F6F6;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hex-left{
+    position: absolute;
+    top: 29%;
+    left: 13%;
+    width: 300px;
+    height: 250px;
+    background-color: #0a1735;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hex-left span{
+    font-size: 5rem;
+    color: #F6F6F6;
+    font-weight: bold;
+    letter-spacing: -3px;
+}
+
+/* 右邊的六角形 */
+.hex-right-o{
+    position: absolute;
+    top: 15.5%;
+    right: 5.5%;
+    width: 450px;
+    height: 400px;
+    background-color: var(--primary-color);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hex-right-w{
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    width: 400px;
+    height: 350px;
+    background-color: #F6F6F6;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hex-right{
+    position: absolute;
+    top: 29%;
+    right: 13%;
+    width: 300px;
+    height: 250px;
+    background-color: var(--primary-color);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hex-right span{
+    font-size: 5rem;
+    color: #F6F6F6;
+    font-weight: bold;
+} 
+
+
+.class-bg{
+    height: 100vh;
+    background-image: url(../images/class-fixbg.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+/* 中間的圓形 */
+
+.circle-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid red;
+    text-align: center;
+    justify-content: center;
+    color: red;
+    background-color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    padding-top: 40px;
+}
+.circle-left{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #d2d2d2;
+    text-align: center;
+    justify-content: center;
+    color: #d2d2d2;
+    background-color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    padding-top: 40px;
+    line-height: 1.1;    
+}
+.circle-right{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #2f7d31;
+    text-align: center;
+    justify-content: center;
+    color: #2f7d31;;
+    background-color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    padding-top: 40px;
+    line-height: 1.1;    
+}
+.label1 { top: 9%; left: 12%; }
+.label2 { top: 41%; left: 1%; }
+.label3 { bottom: 8%; left: 11%; }
+.label4 { bottom: 8%; left: 34%; }
+.label5 { top: 9%; left: 35%; }
+.label6 { top: 9%; right: 34%; }
+.label7 { top: 9%; right: 11%; }
+.label8 { top: 41%; right: 1%; }
+.label9 { bottom: 8%; right: 34%; }
+.label10 { bottom: 8%; right: 11%; }
+
+
 
 /* ---------- 課程介紹-----------*/
 

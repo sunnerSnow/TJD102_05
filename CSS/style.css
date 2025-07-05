@@ -125,9 +125,10 @@ body{
     /* margin: 0; */
     /* max-width: 1440px; */
     width: 100%;
-    height: 450px;
+    height: auto;
     background-color: var(--primary-color);
     font-family: var(--font-cute);
+    padding-bottom: 40px;
 }
 
 .core-title{
@@ -135,9 +136,14 @@ body{
     font-size: 4.6rem;
     max-width: var(--page-width);
     height: 100px;
-    padding: 40px 80px 5px;
+    padding: 24px;
 
 }
+
+.core-title h1{
+    line-height: 46px;
+}
+
 .core ul{
     display: flex;
     flex-wrap: wrap;
@@ -145,7 +151,7 @@ body{
     gap: 10px;
     max-width: 1200px;
     width: 100%;
-    height: 400px;
+    height: auto;
     margin: 0 auto;
 }
 .core li{
@@ -272,9 +278,13 @@ body{
     max-width: 300%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
-    
+    border-radius: 8px;   
 }
+
+.class-intro-r img:first-child{
+    height: 200px
+}
+
 .class-intro li:hover .class-intro-content,
 .class-intro li:hover .class-intro-r {
   opacity: 1;

@@ -13,13 +13,15 @@
     background-repeat: no-repeat;
     font-family: var(--font-cute);   
     line-height: 1.6;
+    position: relative;
 }
 
 .hero h1{
+    position: absolute;
+    top: 39%;
+    left: 5%;
     font-size: 12rem;
     color: white;
-    padding-top: 35px;
-    padding-left: 79px;
     font-family: 'Caprasimo';
 }
 
@@ -103,6 +105,8 @@
     height: 600px;
     margin: 0 auto;
     position: relative;
+    text-align: center;
+    line-height: 1.2;
 }
 /* 左邊六角形 */
 .hex-left-o{
@@ -212,13 +216,13 @@
     height: 100px;
     border-radius: 50%;
     border: 1px solid red;
-    text-align: center;
-    justify-content: center;
     color: red;
     background-color: #fff;
     font-size: 1.6rem;
     display: flex;
-    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    
 }
 .circle-left{
     position: absolute;
@@ -226,14 +230,13 @@
     height: 100px;
     border-radius: 50%;
     border: 1px solid #d2d2d2;
-    text-align: center;
-    justify-content: center;
     color: #d2d2d2;
     background-color: #fff;
     font-size: 1.6rem;
     display: flex;
-    padding-top: 40px;
-    line-height: 1.1;    
+    align-items: center;
+    justify-content: center;
+      
 }
 .circle-right{
     position: absolute;
@@ -241,14 +244,13 @@
     height: 100px;
     border-radius: 50%;
     border: 1px solid #2f7d31;
-    text-align: center;
-    justify-content: center;
     color: #2f7d31;;
     background-color: #fff;
     font-size: 1.6rem;
     display: flex;
-    padding-top: 40px;
-    line-height: 1.1;    
+    align-items: center;
+    justify-content: center;
+    
 }
 .label1 { top: 9%; left: 12%; }
 .label2 { top: 41%; left: 1%; }

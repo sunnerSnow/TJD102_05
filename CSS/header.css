@@ -1,63 +1,80 @@
 @import url('reset.css');
 
-.hero-black{
-    width: 100%;
-    /* min-width: var(--page-width); */
-    background-color: var(--footer-color);
-    /* 元素背景模糊效果，暫時保留給之後+js */
-    /* background-color: rgba(30,30,30,0.6); */
-    /* backdrop-filter: blur(6px);  */
-}
-
 .nav{
     width: 100%;
-    display: flex;
-    align-items: center;
-    /* min-width: var(--page-width); */
-    margin: 0 auto;
-    padding: 5px;
     position: sticky;
     top: 0;
     z-index: 9999; 
-    background-color: var(--footer-color);
-    transition: background-color 0.3s;
-    
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+    background-color: rgba(255,255,255,0.6); 
+    backdrop-filter: blur(8px);             
+    transition: background-color 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
+}
+
+.nav-inner {
+    max-width: var(--page-width);        
+    width: 100%;   
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s, padding 0.4s;
+    padding: 20px 36px;        
+    transform: scale(1.08);    
 }
 
 .logo img{
-    height: 42px;
-    /* padding:12px 24px; */
-    display: block; 
+    height: 50px;
+    transition: height 0.3s;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    padding: 12px 24px;
+    margin-right: auto; 
 }
   
 .main-menu{
     display: flex;
-    flex-grow: 1;
     justify-content: flex-end; /*nav要靠右*/
-    margin-right: 30px;
+    margin-left: auto;
 
 }
 .nav-list{
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-list li a{
     display: inline-block;
     text-decoration: none;
     line-height: 1.6;
-    color: white;
+    color: var(--footer-color);
     padding: 20px;
     font-size: 1.6rem;
     font-weight: bold;
     font-family: var(--font-nav);
     transition: transform 0.3s ease;
+}
+
+.nav.scrolled{
+    background-color: var(--footer-color);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+}
+
+.nav, .nav.scrolled {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.nav.scrolled .nav-inner{
+    transform: scale(1);  
+    padding: 10px 10px;
+}
+.nav.scrolled .nav-list li a {
+    color: var(--bg-color);
+}
+.nav.scrolled .logo img {
+    height: 40px;
 }
 
 .nav-list li a:hover{
@@ -102,7 +119,7 @@
 .login img{
     width: 24px;
     height: auto;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 .sub-list:hover .sub-menu{
     display: block;

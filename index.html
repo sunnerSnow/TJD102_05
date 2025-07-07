@@ -238,6 +238,72 @@
     </div>
   </section>
  
+<!-- 小健雞-->
+<img id="chick-icon" src="./images/chick-icon.svg" alt="小健雞">
+
+<!-- 小健雞計算器  -->
+<div id="fitness-chick">
+    <div class="chick-content">
+        <span id="close" class="close-btn">&times;</span>
+        <h2>小健雞體態分析室</h2>
+        <form id="fitness-form">
+            <div class="form-group">
+                <p>性別：</p>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">生理男</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">生理女</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="age">年齡：</label>
+                <input type="text" id="age" pattern="\d*" inputmode="numeric" required>
+                <div id="age-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="height">身高(cm)：</label>
+                <input type="text" id="height" pattern="\d*" inputmode="numeric" required>
+                <div id="height-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="weight">體重(kg)：</label>
+                <input type="text" id="weight" pattern="\d*" inputmode="numeric" required>
+                <div id="weight-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <p>活動量：</p>
+                <div class="form-activity">
+                    <label>
+                        <input type="radio" name="activity" value="1.2" checked>
+                        久坐/沒在運動
+                    </label>
+                    <label>
+                        <input type="radio" name="activity" value="1.375">
+                        1–2 次/週
+                    </label>
+                    <label>
+                    <input type="radio" name="activity" value="1.55">
+                        3–4 次/週
+                    </label>
+                    <label>
+                        <input type="radio" name="activity" value="1.725">
+                        5–6 次/週
+                    </label>
+                    <label>
+                        <input type="radio" name="activity" value="1.9">
+                        天天都運動
+                    </label>
+                </div>
+            </div>
+            <button id="calculate" type="button">開始檢測</button>
+            <div class="results"></div>
+        </form>   
+    </div>
+</div>
+
+
+
 <!-- Footer -->
 <footer class="wrapper">
     <div class="footer-inner">
@@ -266,5 +332,6 @@
     </div>
 </footer>
 <script src="./js/nav.js"></script>
+<script src="./js/chick.js"></script>
 </body>
 </html>

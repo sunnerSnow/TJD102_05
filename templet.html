@@ -1,27 +1,180 @@
-<div class="nav">
-    <div class="nav-inner">
-        <a href="./index.html" class="logo">
-            <img src="./images/logo-black.svg" alt="logo" id="navbar-logo">
-        </a>
-        <nav class="main-menu"><!-- 主選單 -->
-            <ul class="nav-list">
-                <li><a href="./About.html">ABOUT</a></li>
-                <li class="sub-list">
-                    <a href="./class.html">CLASS</a>
-                    <ul class="sub-menu"><!-- 次選單 -->
-                        <li><a href="./Posture.html">姿勢評估與改善</a></li>
-                        <li><a href="./Senior.html">熟齡友善健身</a></li>
-                        <li><a href="./Privaty.html">一對一私人訓練</a></li>
-                        <li><a href="./Semi-Private.html">一對二共同訓練</a></li>
-                    </ul>
-                </li>
-                <li><a href="./peopleSay.html">PEOPLE SAYS</a></li>
-                <li><a href="./Q&A.html">Q & A</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-        <a href="./Member.html" class="login"><!-- 登入按鈕 -->
-            <img src="./images/person.png" alt="登入">
-        </a>
-    </div>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>健人小雞健身計算器</title>
+<style>
+  body {
+    height: 2000px; /* 做長頁面測試滾動 */
+  }
+ 
+  #chicken-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 9999;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  #fitness-modal {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  #fitness-modal.active {
+    display: flex;
+  }
+  .modal-content {
+    border: 1px solid #EF6000;
+    background: #FCEF91;
+    padding:20px;
+    border-radius:8px;
+    text-align:left;
+    width:280px;
+    position: relative;
+    color: #1E1E1E;
+  }
+
+  .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+.close-btn:hover {
+  color: #333;
+}
+  .modal-content h2 {
+    text-align:center;
+  }
+  .modal-content label {
+    display:block;
+    margin-top:8px;
+  }
+  .modal-content select, .modal-content input {
+    width: 100%;;
+    box-sizing: border-box;
+    margin-top: 4px;
+  }
+  #results {
+    margin-top:10px;
+    font-size:14px;
+  }
+
+  #calculate{
+    display: block;
+    margin: 16px auto;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- 小雞 Icon -->
+<img id="chicken-icon" src="./images/chick-icon.svg" alt="小雞">
+
+<!-- 健身計算器 Modal -->
+<div id="fitness-modal">
+  <div class="modal-content">
+    <span id="close" class="close-btn">&times;</span>
+    <h2>健身計算器</h2>
+    <label>
+      性別:
+      <select id="gender">
+        <option value="male">男性</option>
+        <option value="female">女性</option>
+      </select>
+    </label>
+    <label>年齡:
+      <input type="number" id="age">
+    </label>
+    <label>身高(cm):
+      <input type="number" id="height">
+    </label>
+    <label>體重(kg):
+      <input type="number" id="weight">
+    </label>
+    <label>活動量:
+      <select id="activity">
+        <option value="1.2">久坐</option>
+        <option value="1.375">輕度運動</option>
+        <option value="1.55">中度運動</option>
+        <option value="1.725">高度運動</option>
+        <option value="1.9">非常活躍</option>
+      </select>
+    </label>
+    <button id="calculate">計算</button>
+    <div id="results"></div>
+  </div>
 </div>
+
+<script>
+  const icon = document.getElementById('chicken-icon');
+  const modal = document.getElementById('fitness-modal');
+  const closeBtn = document.getElementById('close');
+  const calcBtn = document.getElementById('calculate');
+  const results = document.getElementById('results');
+
+  icon.addEventListener('click', () => {
+    modal.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    results.innerHTML = '';
+  });
+
+  calcBtn.addEventListener('click', () => {
+    const gender = document.getElementById('gender').value;
+    const age = parseFloat(document.getElementById('age').value);
+    const height = parseFloat(document.getElementById('height').value);
+    const weight = parseFloat(document.getElementById('weight').value);
+    const activity = parseFloat(document.getElementById('activity').value);
+
+    if(!age || !height || !weight){
+      results.innerHTML = '<p>請輸入正確的數值。</p>';
+      return;
+    }
+
+    const bmi = (weight / ((height/100)**2)).toFixed(2);
+    let bmr;
+    if(gender === 'male'){
+      bmr = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age);
+    } else {
+      bmr = 447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age);
+    }
+    const tdee = bmr * activity;
+    let ibw;
+    if(gender === 'male'){
+      ibw = 50 + 0.9 * (height - 152);
+    } else {
+      ibw = 45.5 + 0.9 * (height - 152);
+    }
+    const bodyFat = (1.2 * bmi + 0.23 * age - 10.8 * (gender==='male'?1:0) -5.4).toFixed(1);
+    const protein = (weight * 1.6).toFixed(0);
+
+    results.innerHTML = `
+      <p><strong>BMI:</strong> ${bmi}</p>
+      <p><strong>基礎代謝率 (BMR):</strong> ${bmr.toFixed(0)} kcal</p>
+      <p><strong>每日消耗 (TDEE):</strong> ${tdee.toFixed(0)} kcal</p>
+      <p><strong>理想體重:</strong> ${ibw.toFixed(1)} kg</p>
+      <p><strong>估算體脂率:</strong> ${bodyFat}%</p>
+      <p><strong>建議每日蛋白質:</strong> ${protein} g</p>
+    `;
+  });
+</script>
+</body>
+</html>

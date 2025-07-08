@@ -64,9 +64,10 @@ document.querySelector('#weight').addEventListener('input',function(){
     const weight = parseFloat(document.querySelector('#weight').value);
     const activity = parseFloat(document.querySelector('input[name="activity"]:checked').value);
 
-    if(!age || age < 16 || age > 120 ||
-       !weight || weight < 40 || weight >200 ||
-       !height || height < 130 || height >250 
+    if(!gender ||
+        isNaN(age) || age < 16 || age > 120 ||
+       isNaN(weight) || weight < 40 || weight >200 ||
+       isNaN(height) || height < 130 || height >250 
     ){
         results.innerHTML = '<p class="error">請輸入正確的數值!</p>'
         results.scrollIntoView({ behavior: 'smooth' });
@@ -114,14 +115,15 @@ document.querySelector('#weight').addEventListener('input',function(){
     
     const protein = (weight * 1.1).toFixed(0);
 
-
+    
+    document.querySelector('.result-line').style.display = 'block';
     results.innerHTML =`
-        <p><strong>您的BMI:</strong>  <span class="result-value">${bmi.toFixed(1)}</span></p>
-        <p><strong>您的基礎代謝率 (BMR):</strong>  <span class="result-value">${bmr.toFixed(0)} kcal</span></p>
-        <p><strong>每日總熱量消耗約為 (TDEE):</strong> <span class="result-value"> ${tdee.toFixed(0)} kcal</span></p>
-        <p><strong>您的理想體重為:</strong>  <span class="result-value">${ibw.toFixed(1)} kg</span></p>
-        <p><strong>您的體脂率:</strong>  <span class="result-value">${bodyFat}%</span></p>
-        <p><strong>建議每日蛋白質:</strong> <span class="result-value"> ${protein} g</span></p>
+    <p><strong>您的BMI:</strong>  <span class="result-value">${bmi.toFixed(1)}</span></p>
+    <p><strong>您的基礎代謝率 (BMR):</strong>  <span class="result-value">${bmr.toFixed(0)} kcal</span></p>
+    <p><strong>每日總熱量消耗約為 (TDEE):</strong> <span class="result-value"> ${tdee.toFixed(0)} kcal</span></p>
+    <p><strong>您的理想體重為:</strong>  <span class="result-value">${ibw.toFixed(1)} kg</span></p>
+    <p><strong>您的體脂率:</strong>  <span class="result-value">${bodyFat}%</span></p>
+    <p><strong>建議每日蛋白質:</strong> <span class="result-value"> ${protein} g</span></p>
     `
     
     // 隨機出現鼓勵的話 (陣列)

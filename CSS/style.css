@@ -685,11 +685,6 @@ body{
     font-weight: bold;;
 }
 
-.results {
-    margin-top: 12px;
-    font-size:1.8rem;
-    border-top: 1px dashed rgba(255,255,255,0.5);
-}
 .results p{
     margin: 8px 0;
 }
@@ -722,7 +717,7 @@ body{
 }
 .form-activity label{
     display: flex;
-    flex: 1 1 calc(50% - 8px);
+    /* flex: 1 1 calc(50% - 8px); */
     gap: 8px;
     margin-bottom: 8px;
     justify-content: start;
@@ -746,4 +741,13 @@ body{
     padding-top: 12px;
     font-weight: bold;
     color: var(--primary-color); 
+    text-shadow: 1px 1px 3px black;
+}
+
+.result-line{
+    display: none;
+    border: none;  /*清除預設實線*/
+    margin-top: 12px;
+    font-size:1.8rem;
+    border-top: 1px dashed rgba(255,255,255,0.5);
 }

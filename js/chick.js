@@ -56,8 +56,12 @@ document.querySelector('#weight').addEventListener('input',function(){
     calcBTN.addEventListener('click', (e) => {
         e.preventDefault()
         
-
-    const gender = document.querySelector('input[name="gender"]:checked').value;
+    let gender = null
+    const gender_element =  document.querySelector('input[name="gender"]:checked')
+    if(gender_element){
+        gender = gender_element.value
+    }
+    
     // parseFloat 字串轉換成浮點數
     const age = parseFloat(document.querySelector('#age').value);
     const height = parseFloat(document.querySelector('#height').value);
@@ -69,6 +73,7 @@ document.querySelector('#weight').addEventListener('input',function(){
        isNaN(weight) || weight < 40 || weight >200 ||
        isNaN(height) || height < 130 || height >250 
     ){
+
         results.innerHTML = '<p class="error">請輸入正確的數值!</p>'
         results.scrollIntoView({ behavior: 'smooth' });
         return;

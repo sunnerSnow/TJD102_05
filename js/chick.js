@@ -13,7 +13,24 @@ icon.addEventListener('click', () => {
 closeBTN.addEventListener('click', () => {
     chick.classList.remove('active')
     results.innerHTML = ''
+    document.querySelector('#fitness-form').reset()
+    document.querySelector('.result-line').style.display = 'none';
 })
+
+
+//點外面關掉
+
+chick.addEventListener('click', (e) => {
+    const content = document.querySelector('.chick-content')
+    if(!content.contains(e.target)){
+        chick.classList.remove('active')
+        results.innerHTML = ''
+        document.querySelector('#fitness-form').reset()
+        document.querySelector('.result-line').style.display = 'none';
+    }
+})
+
+
 
 //年齡驗證
 document.querySelector('#age').addEventListener('input',function(){
@@ -149,12 +166,8 @@ document.querySelector('#weight').addEventListener('input',function(){
 
     results.scrollIntoView({ behavior: 'smooth' });
 
-    //關掉小雞後要清空資料
-    closeBTN.addEventListener('click', ()=> {
-        chick.classList.remove('active')
-        results.innerHTML = ''
-        document.querySelector('#fitness-form').reset()
-    })
+
     
 })
                 
+

@@ -1,6 +1,95 @@
-@media screen and (max-width: 1129px) {
+@media screen and (max-width: 1180px) {
+    .banner-text h1{
+        font-size: 8rem;
+    }
+
+    .banner-text h2{
+        font-size: 4.2rem;
+    }
+    .login img{
+        margin-right: 12px;
+    }
+    .logo img{
+        margin-left: 12px;
+    }
+    .core{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1089px){
+    .class-intro-left{
+        margin-left: 20px;
+        height: auto;
+        width: auto;
+    }
+    .class-intro-no{
+        margin-left: 10px;
+    }
+    .class-intro-content{
+        max-height: none;
+    }
+    .brand-left{
+        font-size: 1.8rem;
+        margin-left: 40px;
+    }
+    .footer-inner{
+        gap: 50px;
+    }
+
+    .class-intro li:hover{
+        max-height: none;
+    }
+
+
+    .class-intro li{
+        flex-wrap:nowrap;
+        height: 250px;
+        overflow: visible;
+        max-height: none !important;
+        justify-content: start;
+    }
+    .class-intro li:hover .class-intro-content,
+    .class-intro li:hover .class-intro-r {
+        max-height: none;
+    }
+    .class-intro-r{
+        max-height: none;
+    }
+    .class-intro-content{
+        opacity: 1;
+    }
+    .class-intro-r{
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 820px) {
 	
-	.out{
-	}
+	
+    .banner-text h1{
+        font-size: 6rem;
+    }
+
+    .banner-text h2{
+        font-size: 3.6rem;
+    }
+    .banner-text p{
+        font-size: 1.6rem;
+    }
+
+    .brand{
+        display: block;
+    }
+    .core-title h1{
+        font-size: 3.6rem;
+    }
+    .banner-text{
+        margin-left: 20px;
+    }
+
 
 }

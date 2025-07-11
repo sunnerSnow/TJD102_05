@@ -1,14 +1,165 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 共用樣式 */
+.nav {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* 一般導覽列 */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* 漢堡按鈕：預設隱藏 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* 漢堡選單彈出 */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: flex-end;
+  transition: right 0.4s ease;
+  z-index: 999;
+}
+
+.menu {
+  width: 250px;
+  background: #fff;
+  height: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+
+.menu-overlay.open {
+  right: 0;
+}
+.menu-overlay.open .menu {
+  transform: translateX(0);
+}
+
+.close-btn {
+  font-size: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* === RWD 關鍵 === */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+    </style>
 </head>
 <body>
-    <!-- 縮圖與燈箱 -->
-    <a href="example.jpg" data-lightbox="gallery">
-        <img src="example.jpg" width="200">
-    </a>
+    <!-- 導覽列 -->
+<header class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">LOGO</a>
+  
+      <!-- 一般導覽列：桌機版 -->
+      <nav class="nav-links">
+        <a href="#">首頁</a>
+        <a href="#">服務介紹</a>
+        <a href="#">課程介紹</a>
+        <a href="#">聯絡我們</a>
+      </nav>
+  
+      <!-- 漢堡按鈕：手機版顯示 -->
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  
+    <!-- 漢堡選單彈出 -->
+    <div class="menu-overlay" id="menuOverlay">
+      <nav class="menu">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <a href="#">首頁</a>
+        <a href="#">服務介紹</a>
+        <a href="#">課程介紹</a>
+        <a href="#">聯絡我們</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+ 
+const hamburger = document.getElementById('hamburger');
+const menuOverlay = document.getElementById('menuOverlay');
+const closeBtn = document.getElementById('closeBtn');
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+hamburger.addEventListener('click', () => {
+  menuOverlay.classList.add('open');
+});
+
+closeBtn.addEventListener('click', () => {
+  menuOverlay.classList.remove('open');
+});
+
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    menuOverlay.classList.remove('open');
+  }
+});
+</script>
+
 </body>
 </html>
+  

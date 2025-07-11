@@ -25,15 +25,22 @@
 /* ---------- Brand Story-----------*/
 
 .brand-story-wrapper{
-    max-width: var(--page-width);
+    /* max-width: var(--page-width); */
     width: 100%;
-    margin: 10px auto;
+    margin: 20px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    gap: 60px;
+    /* gap: 60px; */
+    position: relative;
 }
+
+.brand-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
 .brand-story{
     flex-grow: 1;
@@ -96,7 +103,7 @@
 /* ---------- Founder Message-----------*/
 
 .founder-message-wrapper{
-    max-width: 1440px;
+    /* max-width: 1440px; */
     width: 100%;
     margin: 10px auto;
     /* height: 600px; */
@@ -166,7 +173,7 @@
 /* ---------- Founder -----------*/
 
 .funder-wrapper{
-    max-width: 1440px;
+    /* max-width: 1440px; */
     width: 100%;
     display: flex;
     margin-top: 48px;
@@ -258,3 +265,7 @@
     font-size: 1.6rem;
     line-height: 1.6;
 }
+
+@media screen and (max-width: 768px) 
+
+

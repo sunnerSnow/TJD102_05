@@ -73,8 +73,16 @@
 .nav.scrolled .nav-list li a {
     color: var(--bg-color);
 }
+
+.nav.scrolled .sub-menu li a {
+    color: var(--text-color);
+}
 .nav.scrolled .logo img {
     height: 40px;
+}
+
+.nav.scrolled .sub-menu li a:hover{
+    color: var(--bg-color);
 }
 
 .nav-list li a:hover{

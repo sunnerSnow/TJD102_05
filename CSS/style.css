@@ -300,8 +300,8 @@ body{
 }
 
 .brand-left{
-    width: 600px;
-    margin-left: 80px;
+    width: 50%;
+    margin-left: 20px;
     padding: 20px;
     font-size: 2.2rem;
     color: black;
@@ -318,14 +318,15 @@ body{
 }
 
 .brand-right{
-    width: 600px;
+    width: 50%;
     height: 550px;
     position: relative;
     display: flex;
     align-items: center;
-    margin-right: 60px;
+    margin-right: 20px;
 }
 .brand-bg{
+    display: block;
     position: absolute;
     top: 0px;
     left: 20px;
@@ -566,6 +567,7 @@ body{
     cursor: pointer;
     animation: bounce 2s infinite ease-in-out;
     transform-origin: bottom center;
+    z-index: 9999;
 }
 
 

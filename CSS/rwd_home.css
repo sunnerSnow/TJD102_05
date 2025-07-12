@@ -150,8 +150,15 @@
         margin-right:-21px;
     }
     .brand-img img{
-        width: 250px;
+        width: 220px;
     }
+    .brand-img{
+        border-top: 20px solid var(--primary-color);
+        border-right: 20px solid var(--primary-color);
+        border-bottom: 20px solid var(--primary-color);
+        border-radius: 12px ;
+    }
+    .brand-img
     .brand-left{
         font-size: 14px;
     }
@@ -179,6 +186,9 @@
     }
     .coach-right p{
         font-size: 1.6rem;
+    }
+    .google-comment-inner{
+        grid-template-columns:auto;
     }
 
 }
@@ -228,7 +238,7 @@
         text-align: center;
     }
     .google-comment{
-        display: none;
+        /* display: none; */
     }
     .core-title{
         height: auto;

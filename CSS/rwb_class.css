@@ -1,0 +1,122 @@
+@media screen and (max-width: 1000px){
+    .class-core h1{
+        font-size: 8rem;
+    }
+    .class-core span{
+        font-size: 8rem;
+    } 
+    .hex-container{
+        display: none;
+    }
+    .hex-img-left,
+    .het-img-right{
+        display: block;
+        margin:0 auto;
+    }
+    .hex-img-left img,
+    .het-img-right img{
+        display: block;
+        width: 75%;
+        height: auto;
+        margin: 10px auto;
+        }
+}
+
+
+@media screen and (max-width: 820px) {
+    .hero h1{
+        top:44%;
+    }
+    .hero{
+        background-position: 15% 30%;
+    }
+    .class-core h1{
+        font-size: clamp(3rem, 7vw, 7.5rem);
+    }
+    .class-core span{
+        font-size: clamp(3rem, 7vw, 7.5rem);
+    }
+    .class-core h2{
+        font-size: clamp(1.8rem, 4vw, 3.6rem);
+    }
+    .class-intro-content,
+    .class-intro-content-O{
+        margin: 60px;
+    }
+    .class-intro-text p{
+        font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+    }
+    .class-intro-item h3,
+    .class-intro-right-O h3{
+        font-size: clamp(1.6rem, 2vw, 2rem);
+    }
+    .class-intro-item{
+        gap: 0px;
+    }
+
+    .class-intro-right,
+    .class-intro-left,
+    .class-intro-left-O,
+    .class-intro-right-O{
+        padding-left: 40px;
+    }
+    .class-intro-left,
+    .class-intro-right{
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .hero{
+        background-size: cover;
+        height: 200px;
+    }
+    .hero h2{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        font-size: 1.6rem;
+        padding-top:0;
+        padding-left:0;
+    }
+    .hero p{
+        display: none;
+    }
+    .class-bg{
+        display: none;
+    }
+    .class-intro-content, .class-intro-content-O{
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius:40px
+    }
+    .class-intro-right, 
+    .class-intro-left, 
+    .class-intro-left-O, 
+    .class-intro-right-O{
+        padding-left: 10px;
+    }
+    .class-intro-right{
+        padding-right:10px
+    }
+    .class-intro-item img{
+        width: 34vw;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .class-intro-text p{
+        line-height: 1.2;
+        padding-bottom: 25px;
+    }
+    .class-intro-right-O{
+        padding-right:15px
+    }
+    .class-intro-item h3, .class-intro-right-O h3{
+        line-height: 1.2;
+    }
+    .class-intro-item h3{
+        margin: 0 0 5px 0;
+    }
+}

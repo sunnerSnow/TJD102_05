@@ -142,7 +142,9 @@ body{
 .core-title h1{
     line-height: 46px;
 }
-
+.core-title-mobile{
+    display: none;
+}
 .core ul{
     display: flex;
     flex-wrap: wrap;

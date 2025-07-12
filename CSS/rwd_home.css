@@ -236,15 +236,26 @@
         width: 100%;
         text-align: center;
     }
-    .google-comment{
-        /* display: none; */
-    }
+
     .core-title{
+        display: none;
+
+    }
+   
+    .core-title-mobile{
+        color: var(--secondary-color);
+        font-size: 4.6rem;
+        max-width: var(--page-width);
         height: auto;
+        padding: 24px;
+        display: block;
+    
     }
-    .core-title h1{
+    .core-title-mobile h1{
         font-size: 3.2rem;
+        line-height: 1.2;
     }
+
     .core li{
         height:200px
     }

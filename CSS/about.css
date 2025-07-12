@@ -12,14 +12,18 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; 
+    position: relative;
 }
 
 .hero h1{
-    font-size: 12rem;
+    position: absolute;
+    top: 60%;
+    right: -14%;
+    transform: translate(-50%, -50%);
+    font-size:  clamp(3rem, 10vw, 12rem);
     color: white;
-    padding-top: 300px;
-    padding-left: 710px;
     font-family: 'Caprasimo';
+    padding: 0 20px;
 }
 
 /* ---------- Brand Story-----------*/
@@ -27,29 +31,31 @@
 .brand-story-wrapper{
     /* max-width: var(--page-width); */
     width: 100%;
-    margin: 20px 60px;
+    padding: 20px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     /* gap: 60px; */
-    position: relative;
 }
 
 .brand-logo img {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
   }
-
+.brand-logo{
+    flex: 1;
+}
 .brand-story{
-    flex-grow: 1;
+    flex: 1;
     font-family: var(--font-cute);
     line-height: 1.6;
     text-align: center;
 }
 .brand-story h1{
-    font-size: 4.2rem;
+    font-size:  clamp(1.8rem, 5vw, 4rem);
     font-weight: bold;
     background: var(--topic-color);
     -webkit-background-clip: text;
@@ -81,13 +87,13 @@
       opacity: 0; /* 設定透明度 */
     }
     to {
-      width: 550px;
+      width: 50vw;
       opacity: .9;
     }
   }
 
 .brand-story h2{
-    font-size: 3.2rem;
+    font-size: clamp(1.6rem, 4vw, 3rem);
     font-weight: bold;
     color: var(--text-color);
     padding-bottom: 10px;
@@ -265,7 +271,5 @@
     font-size: 1.6rem;
     line-height: 1.6;
 }
-
-@media screen and (max-width: 768px) 
 
 

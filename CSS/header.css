@@ -172,8 +172,8 @@
 .menu-overlay{
     position: fixed;
     top: 60px;
-    right: -100%;
-    width: 100%;
+    right: -142%;
+    width: 70vh;
     height: 100%;
     background: rgba(0,0,0,0.6);
     transition: right 0.4s ease;
@@ -183,7 +183,7 @@
 }
 
 .mobile-menu {
-    width: 60%;
+    width: 42%;
     height: 100vh;
     background:linear-gradient(90deg, rgba(255,123,40,1) 0%, rgba(253,229,121,1) 100%)
     ;
@@ -217,7 +217,15 @@
     right: 0;
 }
 
+@media screen and (max-width: 1180px) {
+    .login img{
+        margin-right: 12px;
+    }
+    .logo img{
+        margin-left: 12px;
+    }
 
+}
 
 @media screen and (max-width: 728px) {
     .main-menu,
@@ -237,12 +245,12 @@
     }
 
     .logo img {
-      height: 40px;
-      content: url("../images/logo-white.svg");
+        height: 40px;
+        content: url("../images/logo-white.svg");
   }
 
     .hamburger {
-     display: flex;
+         display: flex;
 }
 
 }

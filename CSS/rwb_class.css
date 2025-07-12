@@ -9,12 +9,12 @@
         display: none;
     }
     .hex-img-left,
-    .het-img-right{
+    .hex-img-right{
         display: block;
         margin:0 auto;
     }
     .hex-img-left img,
-    .het-img-right img{
+    .hex-img-right img{
         display: block;
         width: 75%;
         height: auto;
@@ -25,7 +25,7 @@
 
 @media screen and (max-width: 820px) {
     .hero h1{
-        top:44%;
+        top:48%;
     }
     .hero{
         background-position: 15% 30%;
@@ -85,7 +85,8 @@
     .class-bg{
         display: none;
     }
-    .class-intro-content, .class-intro-content-O{
+    .class-intro-content, 
+    .class-intro-content-O{
         margin: 0;
         margin-top: 20px;
         margin-bottom: 20px;

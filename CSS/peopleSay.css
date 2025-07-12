@@ -15,10 +15,11 @@
 }
 
 .hero h1{
-    font-size: 12rem;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    font-size: clamp(3rem, 8vw, 12rem);
     color: white;
-    padding-top: 488px;
-    padding-left: 710px;
     font-family: 'Caprasimo';
 }
 
@@ -104,4 +105,30 @@
     align-self: flex-end;
     background-color: #F6F6F6;
     color: var(--text-color);
+}
+
+@media screen and (max-width: 820px) {
+    .hero h1{
+        bottom: 8%;
+        right: 6%;
+    }
+    .comment-block{
+        text-align: center;
+    }
+    .comment-title{
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .comment-card{
+        width: 370px;
+        height:144px;
+    }
+    .comment-text h3{
+        text-align: left;
+    }
+    .hero h1{
+        bottom:12%;
+    }
 }

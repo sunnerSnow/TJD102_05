@@ -10,7 +10,7 @@ body{
 
 .hero{
     width: 100%;
-    min-height: 600px;
+    height: 600px;
     margin: 0 auto;
     background-image: url(../images/Member.png);
     background-size: cover;
@@ -22,16 +22,15 @@ body{
 /* ---------- Member Login-----------*/
 
 .main{
-	min-width:  var(--page-width);
-	height: 540px;
-	margin-top: 50px;
+	/* min-width:  var(--page-width); */
+	height: auto;
 	color: var(--bg-color);
-    margin: 0 auto;
-    text-align: center;
+  margin: 60px auto;
+  text-align: center;
 }
 
 h1{
-	font-size: 4rem;
+	font-size: clamp(2.2rem, 6vw, 4rem);
 	font-family: var( --font-cute);
     color: var(--primary-color);
     line-height: 1.4;
@@ -83,7 +82,7 @@ h1{
   
 .comingSoon{
     display: inline-block;
-    font-size: 5rem;
+    font-size: clamp(2rem, 6vw, 6em);
     font-family: var( --font-cute);
     background: var(--topic-color);
     -webkit-background-clip: text;
@@ -112,3 +111,26 @@ h1{
         letter-spacing: 0;
       }
   }
+
+
+
+  @media screen and (max-width: 712px) {
+    .hero{
+      background-size: contain;
+      height: 296px;
+      padding-top:0;
+    }
+    .chick-animation img{
+      width: 10%;
+    }
+    .main{
+      margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 712px) {
+  .hero{
+    height: 179px;
+  }
+
+}

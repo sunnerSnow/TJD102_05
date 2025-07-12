@@ -11,7 +11,7 @@ body{
 
 .hero{
     width: 100%;
-    min-height: 600px;
+    height: 600px;
     margin: 0 auto;
     background-image: url(../images/Class-熟齡.png);
     background-size: cover;
@@ -26,20 +26,20 @@ body{
     font-family: var(--font-body);
     line-height: 1.6;
     display: flex;
-    margin: 0 auto;
+    margin: 20px auto;
     align-items: center;
-    min-height: 350px;
+    height: auto;
     position: relative;
 }
 
 .class-title-bg {
     position: absolute;
-    font-size: 8rem;
+    font-size: clamp(2.2rem, 5vw, 6rem);
     font-family: 'Caprasimo';
     color: #F6F6F6;  
     z-index: 1;
-    right: 0;
-    top: 120px;
+    right: 2%;
+    top: 42%;
     white-space: nowrap;
     pointer-events: none;
   }
@@ -55,7 +55,7 @@ body{
     padding-left: 60px;
 }
 .class-intro-right h1{
-    font-size: 8rem;
+    font-size: clamp(3.6rem, 7vw, 8rem);
     font-weight: bold;
     color: var(--primary-color);
     position: relative;
@@ -66,13 +66,13 @@ body{
 
 
 .class-intro-left h3{
-    font-size: 2.2rem;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
     font-weight: bold;
     padding-left: 60px;
 
 }
 .class-intro-left p{
-    font-size: 2.2rem;
+    font-size: clamp(1.2rem, 4vw, 2.2rem);
     padding-left: 60px;
 }
 
@@ -100,7 +100,7 @@ body{
 }
 
 .classContent{
-    width: 800px;
+    width: 80%;
     height: 300px;
     align-items: center;
     margin-left: 50px;
@@ -174,4 +174,55 @@ body{
   .classContent.right .classText p::before {
     content: 'arrow_forward';
     color: var(--primary-color); 
+  }
+
+  @media screen and (max-width: 1197px) {
+    .hero{
+        background-position:22%;
+    }
+      .class-intro{
+          flex-direction:column-reverse;
+          height: auto;
+      }
+      .class-title-bg{
+        top: 17%;
+        right:unset;
+      }
+      .class-intro-left{
+        padding-left: 0;
+        padding: 20px;
+      }
+
+  }
+
+  @media screen and (max-width: 820px){
+    .section-number{
+        top:-2%;
+    }
+  }
+
+  @media screen and (max-width: 430px){
+    .hero{
+        background-position:14%;
+    }
+    .classContent{
+        height: auto;
+        padding: 24px 14px;
+    }
+    .class-intro-left h3,
+    .class-intro-left p{
+        padding-left: 0;
+    }
+    .section-number{
+        font-size: 6rem;
+    }
+    .classText h3{
+        font-size: 1.6rem;
+    }
+    .classText p{
+        font-size: 1.2rem;
+    }
+    .classInner{
+        padding-top: 10px;
+    }
   }

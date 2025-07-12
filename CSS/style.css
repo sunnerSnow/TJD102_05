@@ -746,8 +746,8 @@ body{
     text-align: center;
     padding-top: 12px;
     font-weight: bold;
-    color: var(--primary-color); 
-    text-shadow: 1px 1px 3px black;
+    color: yellow; 
+    /* text-shadow: 1px 1px 3px black; */
 }
 
 .result-line{

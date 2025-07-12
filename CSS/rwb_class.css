@@ -25,7 +25,7 @@
 
 @media screen and (max-width: 820px) {
     .hero h1{
-        top:48%;
+        top:45%;
     }
     .hero{
         background-position: 15% 30%;
@@ -68,8 +68,8 @@
 
 @media screen and (max-width: 430px) {
     .hero{
-        background-size: cover;
-        height: 200px;
+        background-size: contain;
+        height: 215px;
     }
     .hero h2{
         position: absolute;

@@ -147,7 +147,7 @@
 
 @media screen and (max-width: 728px) {
     .brand-right{
-        margin-right:-21px;
+        margin-right:10px;
     }
     .brand-img img{
         width: 220px;
@@ -285,6 +285,8 @@
     .coach-right p{
         font-size: 1.2rem;
     }
-    
+    .brand-left{
+        margin-left: 0;
+    }
  
 }

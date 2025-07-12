@@ -241,7 +241,9 @@
         display: none;
 
     }
-   
+    .core-title h1{
+        display: none;
+    }
     .core-title-mobile{
         color: var(--secondary-color);
         font-size: 4.6rem;

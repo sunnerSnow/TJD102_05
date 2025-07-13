@@ -53,7 +53,7 @@ main{
     text-align: center;
     font-size: 1.8rem;
     font-family: var(--font-cute);
-    transition: 0.2s;
+    transition: color .5s 0s cubic-bezier(.43,.23,.55,.75);
 }
 
 

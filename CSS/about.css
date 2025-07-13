@@ -167,7 +167,7 @@
   }
 
 .founder-message h2{
-    font-size: clamp(2rem, 3vw, 3.2rem);
+    font-size: clamp(1.8rem, 3vw, 3.2rem);
     font-weight: bold;
     padding-bottom: 10px;
 }

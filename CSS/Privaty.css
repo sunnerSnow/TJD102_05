@@ -234,4 +234,26 @@ body{
     classList{
         gap: 24px;
     }
+    .section-number{
+        top:1%;
+    }
+    .classContent.left .classText{
+        padding-left: 4px;
+        padding-top: 36px;
+    }
+    .classText{
+        padding-top: 6px;
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .classContent.right .section-number{
+        right: 14px;
+    }
+    .class-intro-right{
+        padding: 10px 24px;
+    }
+    .classList{
+        gap: 36px;
+    }
   }

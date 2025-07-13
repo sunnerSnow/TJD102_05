@@ -204,6 +204,10 @@ body{
     .hero{
         background-position:14%;
     }
+    .classContent.left .classText{
+        padding-top: 44px;
+        padding-left: 4px;
+    }
   }
 
   @media screen and (max-width: 430px){
@@ -229,5 +233,11 @@ body{
     }
     .classInner{
         padding-top: 10px;
+    }
+  }
+  @media screen and (max-width: 390px){
+    .classContent.left .classText{
+        padding-left: 4px;
+        padding-top: 30px;
     }
   }

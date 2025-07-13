@@ -128,9 +128,14 @@ h1{
     }
 }
 
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 430px) {
   .hero{
     height: 179px;
   }
 
+}
+@media screen and (max-width: 390px) {
+  .hero{
+    height: 163px;
+  }
 }

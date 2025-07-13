@@ -3,15 +3,15 @@
         display: block;
         position: relative;
         padding: 0;
-        height: 500px;
+        height: auto;
         margin: 30px 0;
       }
     
       .brand-logo {
         position: relative;
         width: 100%;
-        height: 500px; 
-   
+        height: 440px; 
+        margin: 20px auto;
       }
     
       .brand-logo img {
@@ -90,5 +90,17 @@
     }
     .funder-wrapper{
         margin: 20px auto;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .hero{
+        height: 164px;
+    }
+    .brand-story-wrapper{
+        height: auto;
+    }
+    .brand-logo{
+        height: 370px;
     }
   }

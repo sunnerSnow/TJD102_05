@@ -122,3 +122,9 @@
         margin: 0 0 5px 0;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .hero{
+        height: 195px;
+    }
+}

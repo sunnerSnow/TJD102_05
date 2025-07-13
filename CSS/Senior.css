@@ -225,4 +225,17 @@ body{
     .classInner{
         padding-top: 10px;
     }
+    .classContent.left .classText{
+        padding-left: 18px;
+        padding-top: 30px;
+    }
+    .classList{
+        gap: 36px;
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .classContent.left .classText{
+        padding-left: 12px;
+    }
   }

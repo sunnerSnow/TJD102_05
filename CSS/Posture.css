@@ -211,6 +211,12 @@ body{
         height: auto;
         padding:24px 47px;
     }
+    .classContent.left .classText{
+        padding-top: 50px;
+    }
+    .classText{
+        padding-top: 20px;
+    }
   }
   @media screen and (max-width: 430px){
     .class-intro-left h2{
@@ -227,5 +233,15 @@ body{
     }
     .section-number{
         font-size: 6rem;
+    }
+    .classContent.left .classText{
+        padding-left: 0;
+        padding-top: 35px;
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .class-intro-right{
+        margin: 0 24px;
     }
   }

@@ -1,149 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-.class-core {
-    max-width: 1440px;
-    width: 100%;
-    min-height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-body);
-    flex-direction: column;
-    padding: 40px 0;
-}
-.class-core-content {
-    width: 100%;
-}
-.hex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    width: 100%;
-}
-.hex-group-left,
-.hex-group-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    min-width: 350px;
-    min-height: 430px;
-}
-/* 在 .hex-group-left、.hex-group-right 裡面分別加一層 .labels-left / .labels-right */
-.labels-left, .labels-right {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    justify-content: center;
-    margin-top: 260px; /* 六角形高度+間距 */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab-radio { display: none; }
+
+/* 外層 tab bar */
+.sliding-tab {
+  position: relative;
+  display: flex;
+  width: 480px;        /* 或依設計調整寬度 */
+  height: 60px;
+  background: #ededed; /* 灰底 */
+  border-radius: 30px;
+  box-sizing: border-box;
+  align-items: center;
+  margin: 32px auto;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.15rem;
+  box-shadow: 0 1.5px 4px 0 #0001;
+  overflow: hidden;
 }
 
-.circle-left, .circle-right {
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    background: #fff;
-    font-size: 1.15rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-.circle-left  { border: 2px solid #d2d2d2; color: #aaa; }
-.circle-right { border: 2px solid #2f7d31; color: #2f7d31; }
-.circle-center {
-    position: absolute;
-    left: 50%; top: 50px;
-    transform: translateX(-50%);
-    width: 100px; height: 100px;
-    border-radius: 50%;
-    border: 3px solid red;
-    color: red;
-    background: #fff;
-    font-size: 1.3rem;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 10;
-}
-@media (max-width: 900px) {
-    .hex-container {
-        flex-direction: column;
-        gap: 32px;
-        align-items: center;
-    }
-    .hex-group-left, .hex-group-right {
-        min-width: 220px;
-        min-height: 340px;
-        width: 100%;
-    }
-    .hex-left-o, .hex-left-w, .hex-left,
-    .hex-right-o, .hex-right-w, .hex-right {
-        width: 150px;
-        height: 120px;
-        top: unset; 
-        position: static;
-        margin: 0 auto;
-        left: unset;
-        transform: none;
-    }
-    .labels-left, .labels-right {
-        margin-top: 16px;
-        gap: 10px;
-    }
-    .circle-center {
-        position: static;
-        margin: 0 auto 10px auto;
-        transform: none;
-        width: 80px;
-        height: 80px;
-        font-size: 1rem;
-    }
+/* 滑動紅色背景條 */
+.slider {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 50%;
+  background: #ef3a2d; /* 你要的紅色 */
+  border-radius: 30px;
+  transition: transform 0.35s cubic-bezier(.7,.16,.25,1);
+  z-index: 1;
 }
 
+/* 點tab2就滑到右邊 */
+#tab2:checked ~ .sliding-tab .slider {
+  transform: translateX(100%);
+}
+#tab1:checked ~ .sliding-tab .slider {
+  transform: translateX(0);
+}
 
+/* label按鈕 */
+.sliding-tab label {
+  flex: 1;
+  z-index: 2; /* 蓋在slider上層 */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  color: #bababa;           /* 預設灰字 */
+  font-weight: bold;
+  letter-spacing: .01em;
+  transition: color 0.24s cubic-bezier(.7,.16,.25,1);
+  border-radius: 30px;
+  user-select: none;
+}
 
-  </style>
+/* 被選中的label字變白 */
+#tab1:checked ~ .sliding-tab label[for="tab1"],
+#tab2:checked ~ .sliding-tab label[for="tab2"] {
+  color: #fff;
+}
+
+    </style>
 </head>
 <body>
-  <section class="class-core">
-    <div class="class-core-content">
-    <h1>Stability <span>×</span> Strength</h1>
-    <h2>每一次訓練，不只是為了變強，<br>
-        而是為了找回對身體的主導權。</h2>
-    <div class="hex-container">
-        <div class="hex-group-left">
-            <div class="hex-left-o"></div>
-            <div class="hex-left-w"></div>
-            <div class="hex-left">
-                <span>Personalized</span>
-            </div>
-            <div class="circle-center">核心穩定</div>
-            <div class="circle-left label1">姿勢評估</div>
-            <div class="circle-left label2">年齡友善<br>訓練</div>
-            <div class="circle-left label3">呼吸與動作<br>整合</div>
-            <div class="circle-left label4">調整性伸展</div>
-           <div class="circle-left label5">肌力訓練</div>
+    <main>
+        <input type="radio" id="tab1" name="tab" class="tab-radio" checked>
+        <input type="radio" id="tab2" name="tab" class="tab-radio">
+        <div class="sliding-tab">
+          <div class="slider"></div>
+          <label for="tab1">公式LINEからお問合せ</label>
+          <label for="tab2">フォームからお問合せ</label>
         </div>
-        <div class="hex-group-right">
-            <div class="hex-right-o"></div>
-            <div class="hex-right-w"></div>
-            <div class="hex-right">
-                <span>Strength</span>
-             </div>
-             <div class="circle-right label6">動作功能<br>分析</div>
-             <div class="circle-right label7">當日<br>體能調整</div>
-             <div class="circle-right label8">生活習慣<br>整合</div>
-             <div class="circle-right label9">心理支持<br>動機維持</div>
-             <div class="circle-right label10">溝通與回饋<br>機制</div>
-        </div>  
-    </div>    
-</section>
+        <div class="tab-content tab1-content">Tab1內容</div>
+        <div class="tab-content tab2-content">Tab2內容</div>
+      </main>
+      
 </body>
 </html>

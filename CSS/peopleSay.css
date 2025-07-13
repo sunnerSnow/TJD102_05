@@ -142,4 +142,11 @@
     .hero{
         height: 219px;
     }
+    .comment-card{
+        width: 330px;
+        height: auto;
+    }
+    .comment-text{
+        text-align: start;
+    }
 }

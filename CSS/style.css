@@ -748,7 +748,7 @@ body{
     text-align: center;
     padding-top: 12px;
     font-weight: bold;
-    color: yellow; 
+    color: var(--secondary-color); 
     /* text-shadow: 1px 1px 3px black; */
 }
 

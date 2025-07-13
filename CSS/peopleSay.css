@@ -136,6 +136,9 @@
         top:26%;
         right: 3%;
     }
+    .comment-text{
+        text-align: start;
+    }
 }
 
 @media screen and (max-width: 390px) {
